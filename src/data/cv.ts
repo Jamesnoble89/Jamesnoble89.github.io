@@ -47,7 +47,7 @@ export const profile: Profile = {
   github: 'https://github.com/Jamesnoble89',
   linkedin: 'https://www.linkedin.com/in/james-noble-scotland',
   cvUrl: '/James-Noble-CV.pdf',
-  focusAreas: ['Platform engineering', 'Regulated systems', 'Technical leadership'],
+  focusAreas: ['Backend engineering', 'Regulated systems', 'Technical leadership'],
 }
 
 export const skills: string[] = [
