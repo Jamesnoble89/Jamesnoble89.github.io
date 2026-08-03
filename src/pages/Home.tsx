@@ -9,6 +9,9 @@ export function Home() {
       <p className="mt-1 text-lg text-neutral-600 dark:text-neutral-400">
         {profile.title} &middot; {profile.location}
       </p>
+      <p className="mt-3 text-sm font-medium tracking-wide text-neutral-500 uppercase dark:text-neutral-500">
+        {profile.focusAreas.join(' · ')}
+      </p>
       <p className="mt-6 max-w-2xl text-neutral-700 dark:text-neutral-300">
         {profile.summary}
       </p>

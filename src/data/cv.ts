@@ -7,6 +7,7 @@ export interface Profile {
   github: string
   linkedin?: string
   cvUrl: string
+  focusAreas: string[]
 }
 
 export interface ExperienceEntry {
@@ -46,10 +47,12 @@ export const profile: Profile = {
   github: 'https://github.com/Jamesnoble89',
   linkedin: 'https://www.linkedin.com/in/james-noble-scotland',
   cvUrl: '/James-Noble-CV.pdf',
+  focusAreas: ['Platform engineering', 'Regulated systems', 'Technical leadership'],
 }
 
 export const skills: string[] = [
   'Scala',
+  'Cats Effect',
   'Kotlin',
   'TypeScript',
   'AWS',
