@@ -41,7 +41,7 @@ export const profile: Profile = {
   name: 'James Noble',
   title: 'Senior Software Engineer',
   summary:
-    "Senior Software Engineer and Technical Lead with 6+ years in the UK energy sector, currently leading engineering delivery on complex, regulation-driven projects at Kaluza. Represents engineering on the leadership group for Kaluza's largest client, driving cross-team planning, platform health reviews, and risk management, while running technical interviews and leading discovery for regulatory and change requests.",
+    "Senior Software Engineer and Technical Lead with 6+ years in the UK energy sector, currently leading engineering delivery on complex, regulation-driven projects at Kaluza. Represents Industry UK engineering within the cross-functional leadership group for Kaluza's largest client, driving cross-team planning, platform health reviews, and risk management, while running technical interviews and leading discovery for regulatory and change requests.",
   location: 'Edinburgh, United Kingdom',
   email: 'james@noblesoftware.co.uk',
   github: 'https://github.com/Jamesnoble89',
@@ -70,8 +70,8 @@ export const experience: ExperienceEntry[] = [
     start: 'Mar 2025',
     end: 'Present',
     highlights: [
-      'Acting technical lead for a team of 5 engineers responsible for UK industry integrations spanning traditional and smart metering.',
-      "Represent engineering within the leadership group for OVO, Kaluza's largest client, covering cross-team planning, platform health reviews, and risk management.",
+      'Acting technical lead for a team of 5 engineers on Industry UK, covering both industry and DCC (smart metering) integrations.',
+      "Represent Industry UK engineering within the cross-functional leadership group (tech leads, product, ops, and client delivery) for OVO, Kaluza's largest client, covering cross-team planning, platform health reviews, and risk management.",
       'Led the migration of 24 services from a self-hosted Kubernetes cluster onto a managed infrastructure platform, cutting maintenance overhead and strengthening security through centralised secrets and shared monitoring.',
       "Delivered an API enabling Kaluza's largest client to bring smart pay-as-you-go top-up functionality directly into their own app, replacing a costly third-party integration.",
       "Delivered client readiness for Market-wide Half-Hourly Settlement (MHHS), ensuring compliance two months ahead of the industry's revised go-live date.",
@@ -84,7 +84,7 @@ export const experience: ExperienceEntry[] = [
     start: 'Jan 2023',
     end: 'Mar 2025',
     highlights: [
-      'Acted as technical lead for a 6-engineer UK smart metering and industry team from August 2024, mentoring junior engineers and new starts.',
+      'Acted as technical lead for a 6-engineer Industry UK team from August 2024, mentoring junior engineers and new starts.',
       'Designed technical solutions to replace legacy meters in 200,000+ customer homes ahead of regulatory deadlines.',
       'Built core platform services to configure, control, and fetch data from smart meters, including CI/CD pipelines and testing with QA teams and physical meters.',
       'Migrated 50+ CI/CD pipelines from CircleCI to GitHub Actions.',
