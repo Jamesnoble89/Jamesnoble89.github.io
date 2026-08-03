@@ -19,6 +19,10 @@ export function Contact() {
           </a>
         )}
       </div>
+      <p className="mt-10 text-sm text-neutral-500 dark:text-neutral-500">
+        This site uses privacy-friendly, cookieless analytics to see aggregate visitor counts. No
+        personal data is collected.
+      </p>
     </section>
   )
 }
