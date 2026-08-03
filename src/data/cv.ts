@@ -31,7 +31,7 @@ export const profile: Profile = {
     'Senior software developer with experience building reliable, well-tested systems. Replace this with a couple of sentences about your background and what you focus on.',
   location: 'United Kingdom',
   email: 'you@example.com',
-  github: 'https://github.com/jamesnoble1',
+  github: 'https://github.com/Jamesnoble89',
   linkedin: undefined,
 }
 
@@ -62,6 +62,6 @@ export const projects: Project[] = [
     name: 'Project Name',
     description: 'Short description of the project and the problem it solves.',
     tech: ['TypeScript', 'React'],
-    repo: 'https://github.com/jamesnoble1',
+    repo: 'https://github.com/Jamesnoble89',
   },
 ]

@@ -1,4 +1,4 @@
-# jamesnoble1.github.io
+# Jamesnoble89.github.io
 
 CV and personal projects site. React + TypeScript + Vite + Tailwind CSS, deployed to GitHub Pages with a custom domain (noblesoftware.co.uk) via Cloudflare DNS.
 
