@@ -16,10 +16,15 @@ export interface ExperienceEntry {
   highlights: string[]
 }
 
-export interface Project {
+export interface CaseStudy {
   name: string
-  description: string
+  /** Short framing line, e.g. "Professional project, 2023" or "Open-source contribution" */
+  context: string
+  problem: string
+  approach: string
+  outcome: string
   tech: string[]
+  /** Omit both if the code isn't publicly shareable — the page will note that instead. */
   url?: string
   repo?: string
 }
@@ -57,11 +62,26 @@ export const experience: ExperienceEntry[] = [
   },
 ]
 
-export const projects: Project[] = [
+export const caseStudies: CaseStudy[] = [
   {
-    name: 'Project Name',
-    description: 'Short description of the project and the problem it solves.',
+    name: 'Case Study Title',
+    context: 'Professional project, 2024',
+    problem:
+      'What was broken, slow, or missing, and why it mattered. Include scale or constraints if relevant (traffic, team size, deadline).',
+    approach:
+      'What you actually did and the key decision or trade-off you made. This is the part that shows judgment, not just effort.',
+    outcome:
+      'The result, ideally with a number: latency, cost, incidents, adoption, time saved.',
     tech: ['TypeScript', 'React'],
+    // No url/repo — code is proprietary, so the page shows a note instead of a link.
+  },
+  {
+    name: 'Open-Source Contribution',
+    context: 'Open-source contribution',
+    problem: 'Replace once you have a merged PR: what issue or gap you addressed.',
+    approach: 'What the change involved and any constraints from working in someone else\'s codebase.',
+    outcome: 'Merged/shipped result, plus a link to the PR.',
+    tech: ['TypeScript'],
     repo: 'https://github.com/Jamesnoble89',
   },
 ]
