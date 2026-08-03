@@ -1,8 +1,8 @@
 import { profile, skills } from '../data/cv'
 
-export function About() {
+export function Home() {
   return (
-    <section id="about" className="mx-auto max-w-3xl px-6 py-16">
+    <section className="mx-auto max-w-3xl px-6 py-16">
       <h1 className="text-3xl font-bold text-neutral-900 dark:text-neutral-100">
         {profile.name}
       </h1>
