@@ -7,6 +7,16 @@
     <meta name="description" content="James Noble &mdash; Senior Software Developer. CV and personal projects." />
     <title>James Noble &mdash; Senior Software Developer</title>
     <script type="text/javascript">
+      // Applies the saved/system theme before first paint to avoid a flash of the wrong theme.
+      ;(function () {
+        var stored = localStorage.getItem('theme')
+        var dark =
+          stored === 'dark' ||
+          (stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.classList.toggle('dark', dark)
+      })()
+    </script>
+    <script type="text/javascript">
       // Single Page Apps for GitHub Pages: https://github.com/rafgraph/spa-github-pages
       // Restores the real path after 404.html redirected here with it encoded in the query string.
       ;(function (l) {

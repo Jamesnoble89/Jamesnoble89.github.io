@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { profile } from '../data/cv'
+import { ThemeToggle } from './ThemeToggle'
 
 const navLinks = [
   { to: '/', label: 'About' },
@@ -15,22 +16,25 @@ export function Header() {
         <NavLink to="/" end className="font-semibold text-neutral-900 dark:text-neutral-100">
           {profile.name}
         </NavLink>
-        <nav className="flex gap-5 text-sm text-neutral-600 dark:text-neutral-400">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              end={link.to === '/'}
-              className={({ isActive }) =>
-                isActive
-                  ? 'text-neutral-900 dark:text-neutral-100'
-                  : 'hover:text-neutral-900 dark:hover:text-neutral-100'
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
+        <div className="flex items-center gap-5">
+          <nav className="flex gap-5 text-sm text-neutral-600 dark:text-neutral-400">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.to === '/'}
+                className={({ isActive }) =>
+                  isActive
+                    ? 'text-neutral-900 dark:text-neutral-100'
+                    : 'hover:text-neutral-900 dark:hover:text-neutral-100'
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   )
