@@ -6,6 +6,7 @@ export interface Profile {
   email: string
   github: string
   linkedin?: string
+  cvUrl: string
 }
 
 export interface ExperienceEntry {
@@ -44,6 +45,7 @@ export const profile: Profile = {
   email: 'james@noblesoftware.co.uk',
   github: 'https://github.com/Jamesnoble89',
   linkedin: 'https://www.linkedin.com/in/james-noble-scotland',
+  cvUrl: '/James-Noble-CV.pdf',
 }
 
 export const skills: string[] = [

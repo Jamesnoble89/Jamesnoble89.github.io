@@ -12,6 +12,13 @@ export function Home() {
       <p className="mt-6 max-w-2xl text-neutral-700 dark:text-neutral-300">
         {profile.summary}
       </p>
+      <a
+        href={profile.cvUrl}
+        download
+        className="no-print mt-6 inline-block rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-900 hover:border-neutral-300 dark:border-neutral-800 dark:text-neutral-100 dark:hover:border-neutral-700"
+      >
+        Download CV
+      </a>
       <ul className="mt-6 flex flex-wrap gap-2">
         {skills.map((skill) => (
           <li
