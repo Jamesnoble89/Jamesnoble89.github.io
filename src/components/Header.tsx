@@ -12,12 +12,16 @@ const navLinks = [
 export function Header() {
   return (
     <header className="sticky top-0 z-10 border-b border-neutral-300 bg-neutral-50/90 backdrop-blur dark:border-neutral-700 dark:bg-neutral-900/90">
-      <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
-        <NavLink to="/" end className="font-semibold text-neutral-900 dark:text-neutral-100">
+      <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-y-2 px-6 py-4">
+        <NavLink
+          to="/"
+          end
+          className="font-semibold whitespace-nowrap text-neutral-900 dark:text-neutral-100"
+        >
           {profile.name}
         </NavLink>
-        <div className="flex items-center gap-5">
-          <nav className="flex gap-5 text-sm text-neutral-600 dark:text-neutral-400">
+        <div className="flex flex-wrap items-center gap-5">
+          <nav className="flex flex-wrap gap-5 text-sm text-neutral-600 dark:text-neutral-400">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
