@@ -139,12 +139,24 @@ export const caseStudies: CaseStudy[] = [
     name: 'Zero-Downtime Smart Meter Migration',
     context: 'Professional project, Kaluza, 2023',
     problem:
-      "OVO needed to migrate roughly 250,000 pay-as-you-go smart meters from their legacy CRM onto the Kaluza platform. Get it wrong and customers could be unable to top up or get charged incorrect prices, while OVO's agents would be unable to resolve issues or carry out routine in-life account processes.",
+      "Kaluza's largest client needed to migrate roughly 250,000 pay-as-you-go smart meters from their legacy CRM onto the Kaluza platform. Get it wrong and customers could be unable to top up or get charged incorrect prices, while the client's agents would be unable to resolve issues or carry out routine in-life account processes.",
     approach:
-      "Worked with a cross-functional migration team spanning OVO and Kaluza to design the process. Rather than building a pipeline that manually recreated every piece of account state, I identified that a number of Kaluza's existing automatic in-life processes would trigger correctly on their own, as long as each meter's live state — what existed, its payment mode, and balance derived from reading data — was populated before tariffs were added to the account. Built a Kotlin/Kafka Streams service that polled meters directly for that state and updated our state stores, with a Ktor API the migration team used to trigger and orchestrate cutovers using Kaluza's own automation rather than a bespoke replication path.",
+      "Worked with a cross-functional migration team spanning the client and Kaluza to design the process. Rather than building a pipeline that manually recreated every piece of account state, I identified that a number of Kaluza's existing automatic in-life processes would trigger correctly on their own, as long as each meter's live state — what existed, its payment mode, and balance derived from reading data — was populated before tariffs were added to the account. Built a Kotlin/Kafka Streams service that polled meters directly for that state and updated our state stores, with a Ktor API the migration team used to trigger and orchestrate cutovers using Kaluza's own automation rather than a bespoke replication path.",
     outcome:
-      "Migration completed on time with no incidents — all ~250,000 meters moved over with no disruption to customer top-ups, pricing, or OVO's ability to service accounts.",
+      "Migration completed on time with no incidents — all ~250,000 meters moved over with no disruption to customer top-ups, pricing, or the client's ability to service accounts.",
     tech: ['Kotlin', 'Kafka Streams', 'Ktor'],
+    // No url/repo — code is proprietary, so the page shows a note instead of a link.
+  },
+  {
+    name: 'Native Pay-As-You-Go Top-Up API',
+    context: 'Professional project, Kaluza, 2025–2026',
+    problem:
+      "Kaluza's largest client had customers topping up their smart pay-as-you-go meters through a well-known third-party payment provider, costing a licence fee plus per-transaction fees running into the millions of pounds a year. Bringing that functionality natively into the client's own app meant replacing that integration entirely — with real stakes if it went wrong: a customer could pay and not have it applied to their meter, or in the worst case end up off supply.",
+    approach:
+      "I was heavily involved in the design and discovery process across engineering and stakeholders for the whole flow — including the financial ledger updates and initial payment validation, though payments themselves are handled directly by the client. My team built the orchestration of messaging down to the meter and surfacing successes and errors back to the app team, using Scala, Cats Effect, and Kafka; the wider design also involved TypeScript services owned by other teams. Because a failure here risked customers losing money or being disconnected, the service needed to run reliably 24/7. We built it around an idempotency strategy to prevent double-crediting, with strong error handling that guarantees a customer either gets what they paid for or is flagged for a quick refund rather than money going missing silently.",
+    outcome:
+      'Design work started in 2025 and customer rollout began in 2026, currently in the hundreds of thousands of completed top-ups; migrating the full multi-million PAYG base is scheduled to begin later this year. Demoed at internal all-hands meetings and to senior client executives.',
+    tech: ['Scala', 'Cats Effect', 'Kafka'],
     // No url/repo — code is proprietary, so the page shows a note instead of a link.
   },
   {
