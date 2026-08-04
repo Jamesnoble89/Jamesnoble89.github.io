@@ -10,9 +10,11 @@ export function Contact() {
         <a href={`mailto:${profile.email}`} className="underline">
           {profile.email}
         </a>
-        <a href={profile.github} target="_blank" rel="noreferrer" className="underline">
-          GitHub
-        </a>
+        {profile.github && (
+          <a href={profile.github} target="_blank" rel="noreferrer" className="underline">
+            GitHub
+          </a>
+        )}
         {profile.linkedin && (
           <a href={profile.linkedin} target="_blank" rel="noreferrer" className="underline">
             LinkedIn

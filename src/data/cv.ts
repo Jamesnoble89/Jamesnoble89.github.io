@@ -4,7 +4,7 @@ export interface Profile {
   summary: string
   location: string
   email: string
-  github: string
+  github?: string
   linkedin?: string
   cvUrl: string
   focusAreas: string[]
@@ -44,7 +44,6 @@ export const profile: Profile = {
     "Senior Software Engineer and Technical Lead with 6+ years in the UK energy sector, currently leading engineering delivery on complex, regulation-driven projects at Kaluza. Represents Industry UK engineering within the cross-functional leadership group for Kaluza's largest client, driving cross-team planning, platform health reviews, and risk management, while running technical interviews and leading discovery for regulatory and change requests.",
   location: 'Edinburgh, United Kingdom',
   email: 'james@noblesoftware.co.uk',
-  github: 'https://github.com/Jamesnoble89',
   linkedin: 'https://www.linkedin.com/in/james-noble-scotland',
   cvUrl: '/James-Noble-CV.pdf',
   focusAreas: ['Backend engineering', 'Regulated systems', 'Technical leadership'],
