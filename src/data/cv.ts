@@ -136,15 +136,15 @@ export const credentials: Credential[] = [
 
 export const caseStudies: CaseStudy[] = [
   {
-    name: 'Case Study Title',
-    context: 'Professional project, 2024',
+    name: 'Zero-Downtime Smart Meter Migration',
+    context: 'Professional project, Kaluza, 2023',
     problem:
-      'What was broken, slow, or missing, and why it mattered. Include scale or constraints if relevant (traffic, team size, deadline).',
+      "OVO needed to migrate roughly 250,000 pay-as-you-go smart meters from their legacy CRM onto the Kaluza platform. Get it wrong and customers could be unable to top up or get charged incorrect prices, while OVO's agents would be unable to resolve issues or carry out routine in-life account processes.",
     approach:
-      'What you actually did and the key decision or trade-off you made. This is the part that shows judgment, not just effort.',
+      "Worked with a cross-functional migration team spanning OVO and Kaluza to design the process. Rather than building a pipeline that manually recreated every piece of account state, I identified that a number of Kaluza's existing automatic in-life processes would trigger correctly on their own, as long as each meter's live state — what existed, its payment mode, and balance derived from reading data — was populated before tariffs were added to the account. Built a Kotlin/Kafka Streams service that polled meters directly for that state and updated our state stores, with a Ktor API the migration team used to trigger and orchestrate cutovers using Kaluza's own automation rather than a bespoke replication path.",
     outcome:
-      'The result, ideally with a number: latency, cost, incidents, adoption, time saved.',
-    tech: ['TypeScript', 'React'],
+      "Migration completed on time with no incidents — all ~250,000 meters moved over with no disruption to customer top-ups, pricing, or OVO's ability to service accounts.",
+    tech: ['Kotlin', 'Kafka Streams', 'Ktor'],
     // No url/repo — code is proprietary, so the page shows a note instead of a link.
   },
   {
