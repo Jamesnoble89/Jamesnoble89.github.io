@@ -7,8 +7,7 @@ export function Projects() {
         Projects
       </h2>
       <p className="mt-2 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-        Case studies from professional work where the code isn't publicly shareable, plus
-        open-source contributions where it is.
+        Case studies from professional work where the code isn't publicly shareable.
       </p>
       <div className="mt-8 flex flex-col gap-8">
         {caseStudies.map((study) => (

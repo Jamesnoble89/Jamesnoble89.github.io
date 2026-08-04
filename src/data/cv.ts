@@ -159,13 +159,4 @@ export const caseStudies: CaseStudy[] = [
     tech: ['Scala', 'Cats Effect', 'Kafka'],
     // No url/repo — code is proprietary, so the page shows a note instead of a link.
   },
-  {
-    name: 'Open-Source Contribution',
-    context: 'Open-source contribution',
-    problem: 'Replace once you have a merged PR: what issue or gap you addressed.',
-    approach: 'What the change involved and any constraints from working in someone else\'s codebase.',
-    outcome: 'Merged/shipped result, plus a link to the PR.',
-    tech: ['TypeScript'],
-    repo: 'https://github.com/Jamesnoble89',
-  },
 ]
